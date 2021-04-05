@@ -1,6 +1,6 @@
-# FromZero
+# FromZero [![Netlify Status](https://api.netlify.com/api/v1/badges/5d89e43c-d465-4308-8be5-cb678a380c11/deploy-status)](https://app.netlify.com/sites/vibrant-spence-9f4624/deploys)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+An opinionated Web Development curriculum
 
 ## Available Scripts
 

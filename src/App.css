@@ -4,3 +4,16 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.stackBtn.active {
+  background: rgba(35, 88, 224, 0.1);
+  color: rgba(35, 88, 224, 1);
+}
+.frontendBtn {
+  border-bottom: 2px solid transparent;
+  border-top: 2px solid transparent;
+}
+.frontendBtn.active {
+  background: rgba(35, 88, 224, 0.1);
+  color: rgba(35, 88, 224, 1);
+  border-bottom-color: rgba(35, 88, 224, 1);
+}

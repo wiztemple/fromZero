@@ -6,6 +6,14 @@ import PatternOne from '../assets/pattern1.svg';
 import PatternTwo from '../assets/pattern2.svg';
 import Frontend from '../components/Frontend';
 
+// css
+import '../App.css';
+import Backend from '../components/Backend';
+import Devops from '../components/Devops';
+import UIUX from '../components/UIUX';
+import DataScience from '../components/DataScience';
+import Footer from '../components/Footer';
+
 
 const Home = () => {
   const [setActive, setActiveState] = useState('Frontend');
@@ -15,20 +23,20 @@ const Home = () => {
     setActiveState(() => value);
   };
   return (
-    <div className="font-rubik relative">
-      <img className="absolute left-0 top-20" src={PatternOne} alt="pattern one" />
-      <img className="absolute right-0 top-20" src={PatternTwo} alt="pattern one" />
-      <nav className="w-full fixed z-50 bg-white dark:bg-gray-900 border-b border-white dark:border-gray-800 flex justify-between items-center md:px-24 md:py-3 shadow">
+    <div className="font-rubik relative overflow-x-hidden">
+      <img className="absolute left-0 top-20 z-40 md:w-72 w-20" src={PatternOne} alt="pattern one" />
+      <img className="absolute right-0 top-20 z-40 md:w-32 w-12" src={PatternTwo} alt="pattern one" />
+      <nav className="w-full fixed z-50 bg-white dark:bg-gray-900 border-b border-white dark:border-gray-800 flex justify-between items-center md:px-24 px-5 py-3 shadow">
         <img src={Logo} alt="Logo" />
         <ThemeButton />
       </nav>
-      <div className="md:px-24 md:pt-40 md:pb-28 relative">
+      <div className="md:px-24 pt-40 md:pb-28 pb-8 relative dark:bg-kiwi border-b border-transparent dark:border-gray-800">
         <h1 className="uppercase text-sm text-blue-600 font-medium text-center">START A JOURNEY IN WEB DEVELOPMENT</h1>
-        <h1 className="text-4xl text-center dark:text-darkorange"> An opinionated Web Development <br /> curriculum for the serious</h1>
-        <div className="relative md:top-20 flex md:space-x-6 justify-center">
+        <h1 className="md:text-4xl text-lg text-center dark:text-darkorange"> An opinionated Web Development <br /> curriculum for the serious</h1>
+        <div className="relative md:top-20 top-5 flex justify-center">
           <button
             type="button"
-            className={`text-sm ${setActive === 'Frontend' && 'active:bg-blue-600'
+            className={`md:px-5 px-3 rounded-xl md:py-3 py-1 stackBtn md:text-sm text-xs  focus:outline-none ${setActive === 'Frontend' && 'active'
               }`}
             onClick={toggleTab}
             id="Frontend"
@@ -38,7 +46,7 @@ const Home = () => {
           </button>
           <button
             type="button"
-            className={`text-sm ${setActive === 'Backend' && 'active'
+            className={`md:px-5 px-3 rounded-xl md:py-3 py-1 stackBtn md:text-sm text-xs focus:outline-none ${setActive === 'Backend' && 'active'
               }`}
             onClick={toggleTab}
             id="Backend"
@@ -48,7 +56,7 @@ const Home = () => {
           </button>
           <button
             type="button"
-            className={`text-sm ${setActive === 'UiUx' && 'active'
+            className={`md:px-5 px-3 rounded-xl md:py-3 py-1 stackBtn md:text-sm text-xs  focus:outline-none ${setActive === 'UiUx' && 'active'
               }`}
             onClick={toggleTab}
             id="UiUx"
@@ -58,7 +66,7 @@ const Home = () => {
           </button>
           <button
             type="button"
-            className={`text-sm ${setActive === 'Devops' && 'active'
+            className={`md:px-5 px-3 rounded-xl md:py-3 py-1 stackBtn md:text-sm text-xs  focus:outline-none ${setActive === 'Devops' && 'active'
               }`}
             onClick={toggleTab}
             id="Devops"
@@ -68,7 +76,7 @@ const Home = () => {
           </button>
           <button
             type="button"
-            className={`text-sm ${setActive === 'DataScience' && 'active'
+            className={`md:px-5 px-3 rounded-xl md:py-3 py-1 stackBtn md:text-sm text-xs focus:outline-none ${setActive === 'DataScience' && 'active'
               }`}
             onClick={toggleTab}
             id="DataScience"
@@ -79,8 +87,13 @@ const Home = () => {
         </div>
       </div>
       <div className="bg-gray-100 dark:bg-gray-800">
-        <Frontend />
+        {setActive === 'Frontend' && <Frontend />}
+        {setActive === 'Backend' && <Backend />}
+        {setActive === 'Devops' && <Devops />}
+        {setActive === 'UiUx' && <UIUX />}
+        {setActive === 'DataScience' && <DataScience />}
       </div>
+      <Footer />
     </div>
 
   )

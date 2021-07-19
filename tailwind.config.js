@@ -13,7 +13,7 @@ module.exports = {
         grey: '#EEF6FE'
       },
       fontFamily: {
-        'rubik': ['Rubik', 'sans-serif'],
+        'inter': ['Inter', 'sans-serif'],
       },
     }
   },

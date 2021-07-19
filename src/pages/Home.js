@@ -23,7 +23,7 @@ const Home = () => {
     setActiveState(() => value);
   };
   return (
-    <div className="font-rubik relative overflow-x-hidden">
+    <div className="font-inter relative overflow-x-hidden">
       <img className="absolute left-0 top-20 z-40 md:w-72 w-20" src={PatternOne} alt="pattern one" />
       <img className="absolute right-0 top-20 z-40 md:w-32 w-12" src={PatternTwo} alt="pattern one" />
       <nav className="w-full fixed z-50 bg-white dark:bg-gray-900 border-b border-white dark:border-gray-800 flex justify-between items-center md:px-24 px-5 py-3 shadow">
@@ -31,8 +31,8 @@ const Home = () => {
         <ThemeButton />
       </nav>
       <div className="md:px-24 pt-40 md:pb-28 pb-8 relative dark:bg-kiwi border-b border-transparent dark:border-gray-800">
-        <h1 className="uppercase text-sm text-blue-600 font-medium text-center">START A JOURNEY IN WEB DEVELOPMENT</h1>
-        <h1 className="md:text-4xl text-lg text-center dark:text-darkorange"> An opinionated Web Development <br /> curriculum for the serious</h1>
+        <h1 className="uppercase text-sm text-blue-600 font-bold text-center">START A JOURNEY IN WEB DEVELOPMENT</h1>
+        <h1 className="md:text-5xl text-lg text-center dark:text-darkorange"> An opinionated Frontend Web <br /> Development curriculum.</h1>
         <div className="relative md:top-20 top-5 flex justify-center">
           <button
             type="button"

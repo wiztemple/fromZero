@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Frontend Wiki",
+  "name": "FrontendWiki",
   "icons": [
     {
       "src": "favicon.ico",

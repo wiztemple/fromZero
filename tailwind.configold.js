@@ -1,8 +1,6 @@
 module.exports = {
-  content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
-  ],
-  darkMode: 'class',
+  purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
+  darkMode: 'class', // or 'media' or 'class'
   theme: {
     extend: {
       colors: {
@@ -17,6 +15,11 @@ module.exports = {
       fontFamily: {
         'inter': ['Inter', 'sans-serif'],
       },
+    }
+  },
+  variants: {
+    extend: {
+      backgroundColor: ['active'],
     },
   },
   plugins: [],
